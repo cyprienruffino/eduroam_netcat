@@ -1,0 +1,17 @@
+Description='Working Eduroam netctl config file'
+Interface=wlp2s0
+Connection=wireless
+Security=wpa-configsection
+ESSID=eduroam
+IP=dhcp
+WPAConfigSection=(
+	'ssid="eduroam"'
+	'key_mgmt=WPA-EAP'
+	'eap=TTLS'
+	'identity="student_webmail@institute.com"'
+	'priority=1'
+	'group=TKIP'
+	'proactive_key_caching=1'
+	'phase2="auth=PAP"'
+	'password="$password"'
+)
